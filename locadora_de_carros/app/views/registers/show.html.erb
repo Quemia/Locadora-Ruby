@@ -1,29 +1,32 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @register.name %>
-</p>
+<div class="jumbotron">
+  <%# <style background-color= > %>
+    <h1 class="display-4">
+      <%= @register.name %>
+    </h1>
+    <p class="lead t-">
+      <strong>Endereço:</strong>
+      <%= @register.adress %>
+      </br>
+      </br>
+      <strong>Cpf:</strong>
+      <%= @register.cpf %>
+      </br>
+      </br>
 
-<p>
-  <strong>Adress:</strong>
-  <%= @register.adress %>
-</p>
+      <strong>Data de Nascimento:</strong>
+      <%= @register.born %>
+      </br>
+      </br>
 
-<p>
-  <strong>Cpf:</strong>
-  <%= @register.cpf %>
-</p>
+      <strong>Telefone:</strong>
+      <%= @register.tellphone %>
 
-<p>
-  <strong>Born:</strong>
-  <%= @register.born %>
-</p>
+    </p>
+    <hr class="my-4">
+    <%= link_to 'Editar', edit_register_path(@register), class:"btn-success btn-sm text-white" %>  <%= link_to 'Voltar', registers_path, class:"btn-success btn-sm text-white" %>
+    
 
-<p>
-  <strong>Tellphone:</strong>
-  <%= @register.tellphone %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_register_path(@register) %> |
-<%= link_to 'Back', registers_path %>
